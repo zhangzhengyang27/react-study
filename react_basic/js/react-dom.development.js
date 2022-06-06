@@ -5088,7 +5088,7 @@ function getListeningForDocument(mountAt) {
 /**
  * We listen for bubbled touch events on the document object.
  *
- * Firefox v8.01 (and possibly others) exhibited strange behavior when
+ * Firefox v8.01-脚手架自带文件 (and possibly others) exhibited strange behavior when
  * mounting `onmousemove` events at some node that was not the document
  * element. The symptoms were that if your mouse is not moving over something
  * contained within that mount point (for example on the background) the
@@ -14238,7 +14238,7 @@ function insertNonHydratedInstance(returnFiber, fiber) {
               didNotFindHydratableContainerTextInstance(parentContainer, text);
               break;
             case SuspenseComponent:
-              
+
               break;
           }
           break;

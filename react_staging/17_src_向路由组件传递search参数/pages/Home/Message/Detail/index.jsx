@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import qs from 'querystring'
 
 const DetailData = [
-	{id:'01',content:'你好，中国'},
+	{id:'01-脚手架自带文件',content:'你好，中国'},
 	{id:'02',content:'你好，尚硅谷'},
 	{id:'03',content:'你好，未来的自己'}
 ]
@@ -11,7 +11,7 @@ export default class Detail extends Component {
 		console.log(this.props);
 
 		// 接收params参数
-		// const {id,title} = this.props.match.params 
+		// const {id,title} = this.props.match.params
 
 		// 接收search参数
 		const {search} = this.props.location

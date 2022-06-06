@@ -5,7 +5,7 @@ import Detail from './Detail'
 export default class Message extends Component {
 	state = {
 		messageArr:[
-			{id:'01',title:'消息1'},
+			{id:'01-脚手架自带文件',title:'消息1'},
 			{id:'02',title:'消息2'},
 			{id:'03',title:'消息3'},
 		]
