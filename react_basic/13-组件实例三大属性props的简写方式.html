@@ -9,15 +9,12 @@
 	<div id="test1"></div>
 	<div id="test2"></div>
 	<div id="test3"></div>
-	
 
-	<script type="text/javascript" src="../js/react.development.js"></script>
-
-	<script type="text/javascript" src="../js/react-dom.development.js"></script>
-
-	<script type="text/javascript" src="../js/babel.min.js"></script>
+	<script type="text/javascript" src="./js/react.development.js"></script>
+	<script type="text/javascript" src="./js/react-dom.development.js"></script>
+	<script type="text/javascript" src="./js/babel.min.js"></script>
 	<!-- 引入prop-types，用于对组件标签属性进行限制 -->
-	<script type="text/javascript" src="../js/prop-types.js"></script>
+	<script type="text/javascript" src="./js/prop-types.js"></script>
 
 	<script type="text/babel">
 		//创建组件
@@ -42,7 +39,7 @@
 				sex:'男',//sex默认值为男
 				age:18 //age默认值为18
 			}
-			
+
 			render(){
 				// console.log(this);
 				const {name,age,sex} = this.props
