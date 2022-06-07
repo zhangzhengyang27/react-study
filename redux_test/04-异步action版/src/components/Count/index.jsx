@@ -5,7 +5,8 @@ import store from '../../redux/store'
 import {
 	createIncrementAction,
 	createDecrementAction,
-	createIncrementAsyncAction
+	createIncrementAsyncAction,
+	createDecrementAsyncAction
 } from '../../redux/count_action'
 
 export default class Count extends Component {
@@ -44,6 +45,13 @@ export default class Count extends Component {
 			store.dispatch(createIncrementAsyncAction(value*1,500))
 		// },500)
 	}
+	//异步加
+	decrementAsync = ()=>{
+		const {value} = this.selectNumber
+		// setTimeout(()=>{
+		store.dispatch(createDecrementAsyncAction(value*1,500))
+		// },500)
+	}
 
 	render() {
 		return (
@@ -58,6 +66,7 @@ export default class Count extends Component {
 				<button onClick={this.decrement}>-</button>&nbsp;
 				<button onClick={this.incrementIfOdd}>当前求和为奇数再加</button>&nbsp;
 				<button onClick={this.incrementAsync}>异步加</button>&nbsp;
+				<button onClick={this.decrementAsync}>异步减</button>&nbsp;
 			</div>
 		)
 	}
