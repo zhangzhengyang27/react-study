@@ -6,9 +6,13 @@ export default class Parent extends PureComponent {
 	state = {carName:"奔驰c36",stus:['小张','小李','小王']}
 
 	addStu = ()=>{
-		/* const {stus} = this.state
+		/*
+		只是进行state和props数据的浅比较, 如果只是数据对象内部数据变了, 返回false
+		不要直接修改state数据, 而是要产生新数据
+		const {stus} = this.state
 		stus.unshift('小刘')
-		this.setState({stus}) */
+		this.setState({stus})
+		*/
 
 		const {stus} = this.state
 		this.setState({stus:['小刘',...stus]})

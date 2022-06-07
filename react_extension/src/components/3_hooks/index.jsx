@@ -52,6 +52,7 @@ function Demo(){
 
 	// 使用生命周期钩子
 	React.useEffect(()=>{
+		// 相当于 componentDidMount()、componentDidUpdate()
 		let timer = setInterval(()=>{
 			setCount(count => count+1 )
 		},1000)
