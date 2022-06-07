@@ -9,6 +9,8 @@ export default class Demo extends Component {
 		/* //1.获取原来的count值
 		const {count} = this.state
 		//2.更新状态
+		this.setState({count:count+1})
+		// 或者添加回调函数
 		this.setState({count:count+1},()=>{
 			console.log(this.state.count);
 		})

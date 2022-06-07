@@ -43,12 +43,14 @@ import ReactDOM from 'react-dom'
 	}
 } */
 
+// 函数调用1+n次
 function Demo(){
-	//console.log('Demo');
 
+	// 函数调用1+n次，但是这句话只初始化一次
 	const [count,setCount] = React.useState(0)
 	const myRef = React.useRef()
 
+	// 使用生命周期钩子
 	React.useEffect(()=>{
 		let timer = setInterval(()=>{
 			setCount(count => count+1 )
