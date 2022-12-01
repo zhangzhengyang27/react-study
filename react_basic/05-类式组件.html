@@ -6,13 +6,10 @@
 </head>
 <body>
 
-<div id="test"></div>
-
+<div id="app"></div>
 
 <script type="text/javascript" src="./js/react.development.js"></script>
-
 <script type="text/javascript" src="./js/react-dom.development.js"></script>
-
 <script type="text/javascript" src="./js/babel.min.js"></script>
 
 <script type="text/babel">
@@ -27,7 +24,7 @@
     }
 
     //2.渲染组件到页面
-    ReactDOM.render(<MyComponent/>, document.getElementById('test'))
+    ReactDOM.render(<MyComponent/>, document.getElementById('app'))
     /*
         执行了ReactDOM.render(<MyComponent/>.......之后，发生了什么？
                 1.React解析组件标签，找到了MyComponent组件。
