@@ -39,7 +39,9 @@
             }, 1000);
         }
 
+        // 在更新前会调用这个方法
         getSnapshotBeforeUpdate() {
+            console.log(1212)
             return this.refs.list.scrollHeight
         }
 
