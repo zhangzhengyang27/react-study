@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
 import {Link, Route} from 'react-router-dom'
 import Hello from './pages/1-hello-react/hello'
+import TodoList from './pages/2-TodoList/index'
 
-// import { Button,DatePicker } from 'antd';
-// import {WechatOutlined,WeiboOutlined,SearchOutlined} from '@ant-design/icons'
-// const { RangePicker } = DatePicker;
 
 
 export default class App extends Component {
@@ -21,7 +19,8 @@ export default class App extends Component {
                         <div className="list-group">
 
                             {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
-                            <Link className="list-group-item" to="/hello">About</Link>
+                            <Link className="list-group-item" to="/hello">hello react</Link>
+                            <Link className="list-group-item" to="/todo">TodoList 案例</Link>
 
                             {/*<Link className="list-group-item" to="/home">Home</Link>*/}
                         </div>
@@ -30,8 +29,9 @@ export default class App extends Component {
                         <div className="panel">
                             <div className="panel-body">
                                 {/* 注册路由 */}
-                                {/*<Route path="/about" component={About}/>*/}
+
                                 <Route path="/hello" component={Hello}/>
+                                <Route path="/todo" component={TodoList}/>
                             </div>
                         </div>
                     </div>
@@ -40,27 +40,3 @@ export default class App extends Component {
         )
     }
 }
-
-
-// export default class App extends Component {
-// 	render() {
-// 		return (
-// 			<div>
-// 				App....
-// 				<button>点我</button>
-// 				<Button type="primary">按钮1</Button>
-// 				<Button >按钮2</Button>
-// 				<Button type="link">按钮3</Button>
-// 				<Button type="primary" icon={<SearchOutlined />}>
-// 					Search
-// 				</Button>
-// 				<WechatOutlined />
-// 				<WeiboOutlined />
-// 				<DatePicker/>
-// 				<RangePicker/>
-// 			</div>
-// 		)
-// 	}
-// }
-
-
