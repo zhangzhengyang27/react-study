@@ -12,6 +12,7 @@ import params from './pages/6-route-params/index'
 import search from './pages/7-route-search/index'
 import state from './pages/8-route-state/index'
 import codeRoute from './pages/9-编程式导航/index'
+import antd from './pages/10-antd/index'
 
 
 export default class App extends Component {
@@ -39,6 +40,7 @@ export default class App extends Component {
                             <MyNavLink to="/search"> 路由 search 传参 </MyNavLink>
                             <MyNavLink to="/state"> 路由 state 传参 </MyNavLink>
                             <MyNavLink to="/coderoute"> 编程式导航 </MyNavLink>
+                            <MyNavLink to="/antd"> antd 组件库 </MyNavLink>
                         </div>
                     </div>
                     <div className="col-xs-6">
@@ -57,6 +59,7 @@ export default class App extends Component {
                                     <Route path="/search" component={search}/>
                                     <Route path="/state" component={state}/>
                                     <Route path="/coderoute" component={codeRoute}/>
+                                    <Route path="/antd" component={antd}/>
                                     {/*<Redirect to="/todo"/>*/}
                                 </Switch>
                             </div>
