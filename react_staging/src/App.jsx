@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Link, Route} from 'react-router-dom'
 import Hello from './pages/1-hello-react/hello'
 import TodoList from './pages/2-TodoList/index'
+import AxiosRequesr from './pages/3-axios/index'
 
 
 
@@ -21,6 +22,7 @@ export default class App extends Component {
                             {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
                             <Link className="list-group-item" to="/hello">hello react</Link>
                             <Link className="list-group-item" to="/todo">TodoList 案例</Link>
+                            <Link className="list-group-item" to="/axios-requesr">跨域请求 案例</Link>
 
                             {/*<Link className="list-group-item" to="/home">Home</Link>*/}
                         </div>
@@ -32,6 +34,7 @@ export default class App extends Component {
 
                                 <Route path="/hello" component={Hello}/>
                                 <Route path="/todo" component={TodoList}/>
+                                <Route path="/axios-requesr" component={AxiosRequesr}/>
                             </div>
                         </div>
                     </div>
