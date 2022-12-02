@@ -10,6 +10,7 @@ import MyNavLink from './components/MyNavLink'
 import Home from './pages/5-wrap-route/Home/index' //Home是路由组件
 import params from './pages/6-route-params/index'
 import search from './pages/7-route-search/index'
+import state from './pages/8-route-state/index'
 
 
 export default class App extends Component {
@@ -35,6 +36,7 @@ export default class App extends Component {
                             <MyNavLink to="/home"> 嵌套路由 home </MyNavLink>
                             <MyNavLink to="/params"> 路由 params 传参 </MyNavLink>
                             <MyNavLink to="/search"> 路由 search 传参 </MyNavLink>
+                            <MyNavLink to="/state"> 路由 state 传参 </MyNavLink>
                         </div>
                     </div>
                     <div className="col-xs-6">
@@ -51,6 +53,7 @@ export default class App extends Component {
                                     <Route path="/home" component={Home}/>
                                     <Route path="/params" component={params}/>
                                     <Route path="/search" component={search}/>
+                                    <Route path="/state" component={state}/>
                                     {/*<Redirect to="/todo"/>*/}
                                 </Switch>
                             </div>
