@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {NavLink, Link, Route} from 'react-router-dom'
+import {NavLink, Link, Route,Switch,Redirect} from 'react-router-dom'
 import Hello from './pages/1-hello-react/hello'
 import TodoList from './pages/2-TodoList/index'
 import AxiosRequest from './pages/3-axios/index'
@@ -24,8 +24,9 @@ export default class App extends Component {
                             <NavLink activeClassName="atguigu" className="list-group-item" to="/hello">hello
                                 react</NavLink>
                             <MyNavLink to="/todo">TodoList 案例</MyNavLink>
-                            <Link className="list-group-item" to="/axios-request">跨域请求 案例</Link>
-                            <Link className="list-group-item" to="/axios-pubsub">axios 案例 pubsub</Link>
+                            <MyNavLink to="/todo/1212">TodoList 案例</MyNavLink>
+                            <Link className="list-group-item" to="/axios/axios-request">跨域请求 案例</Link>
+                            <Link className="list-group-item" to="/axios/axios-pubsub">axios 案例 pubsub</Link>
 
                         </div>
                     </div>
@@ -34,11 +35,13 @@ export default class App extends Component {
                             <div className="panel-body">
                                 {/*1.通常情况下，path和component是一一对应的关系。*/}
                                 {/*2.Switch可以提高路由匹配效率(单一匹配)。*/}
+                                {/* exact 开启严格模式 */}
                                 <Switch>
                                     <Route path="/hello" component={Hello}/>
                                     <Route path="/todo" component={TodoList}/>
-                                    <Route path="/axios-request" component={AxiosRequest}/>
-                                    <Route path="/axios-pubsub" component={axiosPubsub}/>
+                                    <Route path="/axios/axios-request" component={AxiosRequest}/>
+                                    <Route path="/axios/axios-pubsub" component={axiosPubsub}/>
+                                    <Redirect to="/todo"/>
                                 </Switch>
                             </div>
                         </div>
