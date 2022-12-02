@@ -6,6 +6,9 @@ import AxiosRequest from './pages/3-axios/index'
 import axiosPubsub from './pages/4-axios-case/pubsub/index'
 import MyNavLink from './components/MyNavLink'
 
+// 引入嵌套路由
+import Home from './pages/5-wrap-route/Home/index' //Home是路由组件
+
 
 export default class App extends Component {
     render() {
@@ -27,6 +30,7 @@ export default class App extends Component {
                             <MyNavLink to="/todo/1212">TodoList 案例</MyNavLink>
                             <Link className="list-group-item" to="/axios/axios-request">跨域请求 案例</Link>
                             <Link className="list-group-item" to="/axios/axios-pubsub">axios 案例 pubsub</Link>
+                            <MyNavLink to="/home"> 嵌套路由 home </MyNavLink>
 
                         </div>
                     </div>
@@ -41,6 +45,7 @@ export default class App extends Component {
                                     <Route path="/todo" component={TodoList}/>
                                     <Route path="/axios/axios-request" component={AxiosRequest}/>
                                     <Route path="/axios/axios-pubsub" component={axiosPubsub}/>
+                                    <Route path="/home" component={Home}/>
                                     <Redirect to="/todo"/>
                                 </Switch>
                             </div>
