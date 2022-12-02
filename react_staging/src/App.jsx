@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {NavLink, Link, Route,Switch,Redirect} from 'react-router-dom'
+import {NavLink, Link, Route, Switch, Redirect} from 'react-router-dom'
 import Hello from './pages/1-hello-react/hello'
 import TodoList from './pages/2-TodoList/index'
 import AxiosRequest from './pages/3-axios/index'
@@ -11,6 +11,7 @@ import Home from './pages/5-wrap-route/Home/index' //Home是路由组件
 import params from './pages/6-route-params/index'
 import search from './pages/7-route-search/index'
 import state from './pages/8-route-state/index'
+import codeRoute from './pages/9-编程式导航/index'
 
 
 export default class App extends Component {
@@ -37,6 +38,7 @@ export default class App extends Component {
                             <MyNavLink to="/params"> 路由 params 传参 </MyNavLink>
                             <MyNavLink to="/search"> 路由 search 传参 </MyNavLink>
                             <MyNavLink to="/state"> 路由 state 传参 </MyNavLink>
+                            <MyNavLink to="/coderoute"> 编程式导航 </MyNavLink>
                         </div>
                     </div>
                     <div className="col-xs-6">
@@ -54,6 +56,7 @@ export default class App extends Component {
                                     <Route path="/params" component={params}/>
                                     <Route path="/search" component={search}/>
                                     <Route path="/state" component={state}/>
+                                    <Route path="/coderoute" component={codeRoute}/>
                                     {/*<Redirect to="/todo"/>*/}
                                 </Switch>
                             </div>
