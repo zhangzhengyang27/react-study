@@ -4,6 +4,7 @@ import Hello from './pages/1-hello-react/hello'
 import TodoList from './pages/2-TodoList/index'
 import AxiosRequest from './pages/3-axios/index'
 import axiosPubsub from './pages/4-axios-case/pubsub/index'
+import MyNavLink from './components/MyNavLink'
 
 
 export default class App extends Component {
@@ -21,7 +22,7 @@ export default class App extends Component {
 
                             {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
                             <NavLink activeClassName="atguigu" className="list-group-item" to="/hello">hello react</NavLink>
-                            <Link className="list-group-item" to="/todo">TodoList 案例</Link>
+                            <MyNavLink to="/todo">TodoList 案例</MyNavLink>
                             <Link className="list-group-item" to="/axios-request">跨域请求 案例</Link>
                             <Link className="list-group-item" to="/axios-pubsub">axios 案例 pubsub</Link>
 
