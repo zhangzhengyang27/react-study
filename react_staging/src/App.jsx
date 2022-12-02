@@ -9,6 +9,7 @@ import MyNavLink from './components/MyNavLink'
 // 引入嵌套路由
 import Home from './pages/5-wrap-route/Home/index' //Home是路由组件
 import params from './pages/6-route-params/index'
+import search from './pages/7-route-search/index'
 
 
 export default class App extends Component {
@@ -33,6 +34,7 @@ export default class App extends Component {
                             <Link className="list-group-item" to="/axios/axios-pubsub">axios 案例 pubsub</Link>
                             <MyNavLink to="/home"> 嵌套路由 home </MyNavLink>
                             <MyNavLink to="/params"> 路由 params 传参 </MyNavLink>
+                            <MyNavLink to="/search"> 路由 search 传参 </MyNavLink>
                         </div>
                     </div>
                     <div className="col-xs-6">
@@ -48,6 +50,7 @@ export default class App extends Component {
                                     <Route path="/axios/axios-pubsub" component={axiosPubsub}/>
                                     <Route path="/home" component={Home}/>
                                     <Route path="/params" component={params}/>
+                                    <Route path="/search" component={search}/>
                                     {/*<Redirect to="/todo"/>*/}
                                 </Switch>
                             </div>
