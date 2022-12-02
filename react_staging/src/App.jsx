@@ -21,7 +21,8 @@ export default class App extends Component {
                         <div className="list-group">
 
                             {/* 在React中靠路由链接实现切换组件--编写路由链接 */}
-                            <NavLink activeClassName="atguigu" className="list-group-item" to="/hello">hello react</NavLink>
+                            <NavLink activeClassName="atguigu" className="list-group-item" to="/hello">hello
+                                react</NavLink>
                             <MyNavLink to="/todo">TodoList 案例</MyNavLink>
                             <Link className="list-group-item" to="/axios-request">跨域请求 案例</Link>
                             <Link className="list-group-item" to="/axios-pubsub">axios 案例 pubsub</Link>
@@ -31,11 +32,14 @@ export default class App extends Component {
                     <div className="col-xs-6">
                         <div className="panel">
                             <div className="panel-body">
-
-                                <Route path="/hello" component={Hello}/>
-                                <Route path="/todo" component={TodoList}/>
-                                <Route path="/axios-request" component={AxiosRequest}/>
-                                <Route path="/axios-pubsub" component={axiosPubsub}/>
+                                {/*1.通常情况下，path和component是一一对应的关系。*/}
+                                {/*2.Switch可以提高路由匹配效率(单一匹配)。*/}
+                                <Switch>
+                                    <Route path="/hello" component={Hello}/>
+                                    <Route path="/todo" component={TodoList}/>
+                                    <Route path="/axios-request" component={AxiosRequest}/>
+                                    <Route path="/axios-pubsub" component={axiosPubsub}/>
+                                </Switch>
                             </div>
                         </div>
                     </div>
