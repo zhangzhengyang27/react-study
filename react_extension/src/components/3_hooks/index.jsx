@@ -61,7 +61,7 @@ function Demo(){
 		}
 	},[])
 
-	//加的回调
+	// 加操作的回调
 	function add(){
 		//setCount(count+1) //第一种写法
 		setCount(count => count+1 )

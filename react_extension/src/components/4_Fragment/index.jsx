@@ -6,6 +6,7 @@ export default class Demo extends Component {
 			// 相当于block
 			<Fragment key={1}>
 				<input type="text"/>
+				<hr/>
 				<input type="text"/>
 			</Fragment>
 		)
